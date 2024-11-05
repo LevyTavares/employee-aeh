@@ -30,12 +30,9 @@ class Gerente(Funcionario):
 
     def aumentar_salario(self, valor):
         if valor > 0:
-            self.set_salario(self.get_salario() + valor * 1.1)
+            super().aumentar_salario(valor)  # Usa o método da superclasse para aumentar o salário
         else:
             print("Valor de aumento inválido.")
-
-    def set_salario(self, novo_salario):
-        self.__salario = novo_salario
 
 # código de teste
 
